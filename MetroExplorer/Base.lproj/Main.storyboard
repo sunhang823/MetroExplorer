@@ -1,0 +1,309 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Nht-Gl-lqz">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Menu View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="MenuViewController" customModule="MetroExplorer" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="center" spacing="47" translatesAutoresizingMaskIntoConstraints="NO" id="HkY-ic-3bz">
+                                <rect key="frame" x="125.5" y="298.5" width="163.5" height="299.5"/>
+                                <subviews>
+                                    <label opaque="NO" clearsContextBeforeDrawing="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MetroExplorer" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PGg-UD-0eY">
+                                        <rect key="frame" x="0.0" y="0.0" width="163.5" height="32.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="27"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PwD-yb-6L3">
+                                        <rect key="frame" x="39" y="79.5" width="85" height="42"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                        <state key="normal" title="Nearest"/>
+                                        <connections>
+                                            <action selector="NearestButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kgA-q7-75l"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9OO-pF-aNr">
+                                        <rect key="frame" x="6.5" y="168.5" width="150" height="42"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                        <state key="normal" title="Select Station"/>
+                                        <connections>
+                                            <action selector="SelectStationButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="LTs-IA-gRB"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vtq-6J-tR6">
+                                        <rect key="frame" x="32.5" y="257.5" width="98" height="42"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                        <state key="normal" title="Favorites"/>
+                                        <connections>
+                                            <action selector="FavoritesButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3uJ-kL-fDD"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="HkY-ic-3bz" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="62s-JY-zj2"/>
+                            <constraint firstItem="HkY-ic-3bz" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="xWo-Ax-3en"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="4FS-WO-dQX"/>
+                    <connections>
+                        <segue destination="7TU-Ox-Hy0" kind="show" identifier="nearestLandmarksSegue" id="aWg-lm-l1j"/>
+                        <segue destination="WU6-Vz-2ua" kind="show" identifier="metroStationSegue" id="dH5-cw-yUe"/>
+                        <segue destination="7TU-Ox-Hy0" kind="show" identifier="favoriteLandmarkSegue" id="Opp-G9-r42"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="992.75362318840587" y="26.116071428571427"/>
+        </scene>
+        <!--Metro Stations Table View Controller-->
+        <scene sceneID="PEM-HI-aC9">
+            <objects>
+                <tableViewController id="WU6-Vz-2ua" customClass="MetroStationsTableViewController" customModule="MetroExplorer" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="Gpk-KM-RoP">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="metroStationCell" id="NrE-9K-IkG" customClass="MetroStationTableViewCell" customModule="MetroExplorer" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="414" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="NrE-9K-IkG" id="giM-yG-TBt">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MetroStationName" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JHb-0u-Woh">
+                                            <rect key="frame" x="30" y="11.5" width="300" height="21"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="300" id="cIe-vh-k9e"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="JHb-0u-Woh" firstAttribute="centerY" secondItem="giM-yG-TBt" secondAttribute="centerY" id="0lV-uQ-ijb"/>
+                                        <constraint firstItem="JHb-0u-Woh" firstAttribute="centerX" secondItem="giM-yG-TBt" secondAttribute="centerX" id="Dnq-av-KfE"/>
+                                        <constraint firstItem="JHb-0u-Woh" firstAttribute="leading" secondItem="giM-yG-TBt" secondAttribute="leadingMargin" constant="10" id="gbW-PT-4HF"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="MetroStationName" destination="JHb-0u-Woh" id="dQb-ZZ-GUN"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="WU6-Vz-2ua" id="rXv-Xy-KnB"/>
+                            <outlet property="delegate" destination="WU6-Vz-2ua" id="gCx-Fa-fJG"/>
+                        </connections>
+                    </tableView>
+                    <connections>
+                        <segue destination="7TU-Ox-Hy0" kind="show" identifier="landmarksSegue" id="t3a-Yd-ras"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="foa-6p-XLC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1875" y="26"/>
+        </scene>
+        <!--Landmarks Table View Controller-->
+        <scene sceneID="pZu-6k-AxA">
+            <objects>
+                <tableViewController id="7TU-Ox-Hy0" customClass="LandmarksTableViewController" customModule="MetroExplorer" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="110" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="B7E-Jk-2Cj">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="landmarkCell" rowHeight="110" id="9B5-rc-eAV" customClass="LandmarkTableViewCell" customModule="MetroExplorer" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="414" height="110"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="9B5-rc-eAV" id="mBt-wZ-FT5">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="109.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LandmarkName" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IYM-f7-XtC">
+                                            <rect key="frame" x="25" y="26" width="200" height="20"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="20" id="1WI-6i-kBb"/>
+                                                <constraint firstAttribute="width" constant="200" id="Gv0-Se-DM5"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sNG-vu-dut">
+                                            <rect key="frame" x="262" y="11" width="132" height="75"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LandmarkAddress" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gkx-MO-CHr">
+                                            <rect key="frame" x="25" y="86" width="150" height="16"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="150" id="EL0-pd-GLj"/>
+                                                <constraint firstAttribute="height" constant="16" id="fA6-1u-REc"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="Gkx-MO-CHr" firstAttribute="top" secondItem="IYM-f7-XtC" secondAttribute="bottom" constant="40" id="R2B-E7-xID"/>
+                                        <constraint firstItem="Gkx-MO-CHr" firstAttribute="leading" secondItem="IYM-f7-XtC" secondAttribute="leading" id="cwm-1i-7Fl"/>
+                                        <constraint firstItem="IYM-f7-XtC" firstAttribute="top" secondItem="mBt-wZ-FT5" secondAttribute="topMargin" constant="15" id="dnG-hf-lXS"/>
+                                        <constraint firstItem="IYM-f7-XtC" firstAttribute="leading" secondItem="mBt-wZ-FT5" secondAttribute="leadingMargin" constant="5" id="ooe-Bd-UGD"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="LandmarkAddress" destination="Gkx-MO-CHr" id="u5q-IQ-P4r"/>
+                                    <outlet property="LandmarkImage" destination="sNG-vu-dut" id="bhb-ET-5IS"/>
+                                    <outlet property="LandmarkName" destination="IYM-f7-XtC" id="GZj-Qp-5mx"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="7TU-Ox-Hy0" id="bIO-im-4Jl"/>
+                            <outlet property="delegate" destination="7TU-Ox-Hy0" id="vsL-wm-kxr"/>
+                        </connections>
+                    </tableView>
+                    <connections>
+                        <segue destination="9Rr-DT-YVH" kind="show" identifier="landmarkDetailSegue" id="XxG-pZ-oZF"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mOs-10-QqZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1844.9275362318842" y="-656.25"/>
+        </scene>
+        <!--Title-->
+        <scene sceneID="iXZ-AF-ilV">
+            <objects>
+                <viewController id="9Rr-DT-YVH" customClass="LandmarkDetailViewController" customModule="MetroExplorer" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="P1D-T8-L3I">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="YhV-NW-e5a">
+                                <rect key="frame" x="107" y="172" width="200" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="50a-Vv-0GX"/>
+                                    <constraint firstAttribute="width" constant="200" id="ANc-x5-aPA"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t7L-Tf-VJJ">
+                                <rect key="frame" x="107" y="118" width="200" height="24"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="c4i-5q-CLB"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rating" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ig3-7a-Rk7">
+                                <rect key="frame" x="107" y="322" width="200" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="6uG-xP-Eee"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Address" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lib-gb-wro">
+                                <rect key="frame" x="107" y="373" width="200" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="LbM-2J-ShH"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aQr-ev-WSI">
+                                <rect key="frame" x="172" y="424" width="70" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="70" id="G6Q-uB-1Wl"/>
+                                    <constraint firstAttribute="height" constant="30" id="yqF-6b-khd"/>
+                                </constraints>
+                                <state key="normal" title="Direction"/>
+                                <connections>
+                                    <action selector="directionButtonPressed:" destination="9Rr-DT-YVH" eventType="touchUpInside" id="YHZ-Xf-Lj1"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="ig3-7a-Rk7" firstAttribute="centerX" secondItem="P1D-T8-L3I" secondAttribute="centerX" id="Nen-Wa-p36"/>
+                            <constraint firstItem="lib-gb-wro" firstAttribute="centerX" secondItem="P1D-T8-L3I" secondAttribute="centerX" id="QhI-uv-VhJ"/>
+                            <constraint firstItem="YhV-NW-e5a" firstAttribute="top" secondItem="t7L-Tf-VJJ" secondAttribute="bottom" constant="30" id="atk-Hp-hEi"/>
+                            <constraint firstItem="aQr-ev-WSI" firstAttribute="centerX" secondItem="P1D-T8-L3I" secondAttribute="centerX" id="fEr-np-uDq"/>
+                            <constraint firstItem="ig3-7a-Rk7" firstAttribute="top" secondItem="YhV-NW-e5a" secondAttribute="bottom" constant="50" id="gcs-xk-v9b"/>
+                            <constraint firstItem="lib-gb-wro" firstAttribute="top" secondItem="ig3-7a-Rk7" secondAttribute="bottom" constant="30" id="hAa-L7-rU2"/>
+                            <constraint firstItem="t7L-Tf-VJJ" firstAttribute="centerX" secondItem="P1D-T8-L3I" secondAttribute="centerX" id="he3-MJ-sM2"/>
+                            <constraint firstItem="YhV-NW-e5a" firstAttribute="centerX" secondItem="P1D-T8-L3I" secondAttribute="centerX" id="k99-60-L7g"/>
+                            <constraint firstItem="t7L-Tf-VJJ" firstAttribute="top" secondItem="eWQ-RL-94M" secondAttribute="top" constant="30" id="uln-5y-cyE"/>
+                            <constraint firstItem="aQr-ev-WSI" firstAttribute="top" secondItem="lib-gb-wro" secondAttribute="bottom" constant="30" id="zse-qN-axA"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="eWQ-RL-94M"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Title" id="GWC-zK-fGk">
+                        <rightBarButtonItems>
+                            <barButtonItem systemItem="action" id="u3Y-aK-bIb">
+                                <connections>
+                                    <action selector="shareButtonPressed:" destination="9Rr-DT-YVH" id="OGK-TT-V47"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem systemItem="add" id="rA8-kT-ihe">
+                                <connections>
+                                    <action selector="likeButtonPressed:" destination="9Rr-DT-YVH" id="3kq-WC-wrP"/>
+                                </connections>
+                            </barButtonItem>
+                        </rightBarButtonItems>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="LandmarkAddress" destination="lib-gb-wro" id="3KJ-he-SGu"/>
+                        <outlet property="LandmarkImage" destination="YhV-NW-e5a" id="5T4-Cy-VnI"/>
+                        <outlet property="LandmarkName" destination="t7L-Tf-VJJ" id="Z7b-er-4FD"/>
+                        <outlet property="LandmarkRating" destination="ig3-7a-Rk7" id="ywT-7N-OI1"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oiS-2w-JdG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2747.826086956522" y="-656.25"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="diL-bQ-ME2">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Nht-Gl-lqz" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="pvg-oV-VTB">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="cIa-LW-Ikk"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="i2J-K5-Gpm" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="204" y="27"/>
+        </scene>
+    </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="aWg-lm-l1j"/>
+    </inferredMetricsTieBreakers>
+</document>

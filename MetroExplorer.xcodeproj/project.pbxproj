@@ -1,0 +1,496 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2908BB729DE9C558FF5F0796 /* Pods_MetroExplorer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C342ED3791725F8B3E5FE3E1 /* Pods_MetroExplorer.framework */; };
+		832C32FF219F2C2A00F9D876 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 832C32FE219F2C2A00F9D876 /* AppDelegate.swift */; };
+		832C3304219F2C2A00F9D876 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 832C3302219F2C2A00F9D876 /* Main.storyboard */; };
+		832C3306219F2C2B00F9D876 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 832C3305219F2C2B00F9D876 /* Assets.xcassets */; };
+		832C3309219F2C2B00F9D876 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 832C3307219F2C2B00F9D876 /* LaunchScreen.storyboard */; };
+		832C3311219F2C6600F9D876 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 832C3310219F2C6600F9D876 /* MenuViewController.swift */; };
+		832C3313219F2E1B00F9D876 /* LandmarksTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 832C3312219F2E1B00F9D876 /* LandmarksTableViewController.swift */; };
+		832C3315219F2E7500F9D876 /* MetroStationsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 832C3314219F2E7500F9D876 /* MetroStationsTableViewController.swift */; };
+		839C313D21A86C40005A0332 /* YelpFusionResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 839C313C21A86C40005A0332 /* YelpFusionResponse.swift */; };
+		839C313F21A86D9F005A0332 /* YelpFusionAPIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 839C313E21A86D9F005A0332 /* YelpFusionAPIManager.swift */; };
+		83BCD91621B1F43200C7E688 /* LocationDetector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83BCD91521B1F43200C7E688 /* LocationDetector.swift */; };
+		83BCD91B21B1FF9900C7E688 /* MetroStationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83BCD91A21B1FF9900C7E688 /* MetroStationTableViewCell.swift */; };
+		83BCD91F21B20F7400C7E688 /* LandmarkTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83BCD91E21B20F7400C7E688 /* LandmarkTableViewCell.swift */; };
+		83BCD92121B214D300C7E688 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83BCD92021B214D300C7E688 /* Extension.swift */; };
+		83BCD92321B2185400C7E688 /* LandmarkDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83BCD92221B2185400C7E688 /* LandmarkDetailViewController.swift */; };
+		83D01A4C21A7275D00CCE4CB /* WmataAPIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83D01A4B21A7275D00CCE4CB /* WmataAPIManager.swift */; };
+		83D01A4E21A72A9F00CCE4CB /* WmataResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83D01A4D21A72A9F00CCE4CB /* WmataResponse.swift */; };
+		83D01A5021A7341200CCE4CB /* PeresistenceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83D01A4F21A7341200CCE4CB /* PeresistenceManager.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		1324D01F5B5E3FC4DDB14A5C /* Pods-MetroExplorer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MetroExplorer.release.xcconfig"; path = "Pods/Target Support Files/Pods-MetroExplorer/Pods-MetroExplorer.release.xcconfig"; sourceTree = "<group>"; };
+		832C32FB219F2C2A00F9D876 /* MetroExplorer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MetroExplorer.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		832C32FE219F2C2A00F9D876 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		832C3303219F2C2A00F9D876 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		832C3305219F2C2B00F9D876 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		832C3308219F2C2B00F9D876 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		832C330A219F2C2B00F9D876 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		832C3310219F2C6600F9D876 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
+		832C3312219F2E1B00F9D876 /* LandmarksTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandmarksTableViewController.swift; sourceTree = "<group>"; };
+		832C3314219F2E7500F9D876 /* MetroStationsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetroStationsTableViewController.swift; sourceTree = "<group>"; };
+		839C313C21A86C40005A0332 /* YelpFusionResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YelpFusionResponse.swift; sourceTree = "<group>"; };
+		839C313E21A86D9F005A0332 /* YelpFusionAPIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YelpFusionAPIManager.swift; sourceTree = "<group>"; };
+		83BCD91521B1F43200C7E688 /* LocationDetector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationDetector.swift; sourceTree = "<group>"; };
+		83BCD91A21B1FF9900C7E688 /* MetroStationTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetroStationTableViewCell.swift; sourceTree = "<group>"; };
+		83BCD91E21B20F7400C7E688 /* LandmarkTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandmarkTableViewCell.swift; sourceTree = "<group>"; };
+		83BCD92021B214D300C7E688 /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
+		83BCD92221B2185400C7E688 /* LandmarkDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandmarkDetailViewController.swift; sourceTree = "<group>"; };
+		83D01A4B21A7275D00CCE4CB /* WmataAPIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WmataAPIManager.swift; sourceTree = "<group>"; };
+		83D01A4D21A72A9F00CCE4CB /* WmataResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WmataResponse.swift; sourceTree = "<group>"; };
+		83D01A4F21A7341200CCE4CB /* PeresistenceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeresistenceManager.swift; sourceTree = "<group>"; };
+		AAA9FFA127ED52D6B5F41D43 /* Pods-MetroExplorer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MetroExplorer.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MetroExplorer/Pods-MetroExplorer.debug.xcconfig"; sourceTree = "<group>"; };
+		C342ED3791725F8B3E5FE3E1 /* Pods_MetroExplorer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MetroExplorer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		832C32F8219F2C2A00F9D876 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2908BB729DE9C558FF5F0796 /* Pods_MetroExplorer.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		401056ADE9F0782FE7D1911A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				AAA9FFA127ED52D6B5F41D43 /* Pods-MetroExplorer.debug.xcconfig */,
+				1324D01F5B5E3FC4DDB14A5C /* Pods-MetroExplorer.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		6537923CD3785A63E7545D8C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C342ED3791725F8B3E5FE3E1 /* Pods_MetroExplorer.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		832C32F2219F2C2A00F9D876 = {
+			isa = PBXGroup;
+			children = (
+				832C32FD219F2C2A00F9D876 /* MetroExplorer */,
+				832C32FC219F2C2A00F9D876 /* Products */,
+				401056ADE9F0782FE7D1911A /* Pods */,
+				6537923CD3785A63E7545D8C /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		832C32FC219F2C2A00F9D876 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				832C32FB219F2C2A00F9D876 /* MetroExplorer.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		832C32FD219F2C2A00F9D876 /* MetroExplorer */ = {
+			isa = PBXGroup;
+			children = (
+				83BCD91721B1FEFC00C7E688 /* TableView */,
+				83D01A4621A7265700CCE4CB /* models */,
+				83D01A4521A7261100CCE4CB /* managers */,
+				832C3316219F2F3400F9D876 /* view controllers */,
+				832C32FE219F2C2A00F9D876 /* AppDelegate.swift */,
+				832C3302219F2C2A00F9D876 /* Main.storyboard */,
+				832C3305219F2C2B00F9D876 /* Assets.xcassets */,
+				832C3307219F2C2B00F9D876 /* LaunchScreen.storyboard */,
+				832C330A219F2C2B00F9D876 /* Info.plist */,
+			);
+			path = MetroExplorer;
+			sourceTree = "<group>";
+		};
+		832C3316219F2F3400F9D876 /* view controllers */ = {
+			isa = PBXGroup;
+			children = (
+				832C3310219F2C6600F9D876 /* MenuViewController.swift */,
+				832C3314219F2E7500F9D876 /* MetroStationsTableViewController.swift */,
+				832C3312219F2E1B00F9D876 /* LandmarksTableViewController.swift */,
+				83BCD92221B2185400C7E688 /* LandmarkDetailViewController.swift */,
+			);
+			path = "view controllers";
+			sourceTree = "<group>";
+		};
+		83BCD91721B1FEFC00C7E688 /* TableView */ = {
+			isa = PBXGroup;
+			children = (
+				83BCD91E21B20F7400C7E688 /* LandmarkTableViewCell.swift */,
+				83BCD91A21B1FF9900C7E688 /* MetroStationTableViewCell.swift */,
+			);
+			path = TableView;
+			sourceTree = "<group>";
+		};
+		83D01A4521A7261100CCE4CB /* managers */ = {
+			isa = PBXGroup;
+			children = (
+				83D01A4B21A7275D00CCE4CB /* WmataAPIManager.swift */,
+				83D01A4F21A7341200CCE4CB /* PeresistenceManager.swift */,
+				839C313E21A86D9F005A0332 /* YelpFusionAPIManager.swift */,
+				83BCD91521B1F43200C7E688 /* LocationDetector.swift */,
+				83BCD92021B214D300C7E688 /* Extension.swift */,
+			);
+			path = managers;
+			sourceTree = "<group>";
+		};
+		83D01A4621A7265700CCE4CB /* models */ = {
+			isa = PBXGroup;
+			children = (
+				83D01A4D21A72A9F00CCE4CB /* WmataResponse.swift */,
+				839C313C21A86C40005A0332 /* YelpFusionResponse.swift */,
+			);
+			path = models;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		832C32FA219F2C2A00F9D876 /* MetroExplorer */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 832C330D219F2C2B00F9D876 /* Build configuration list for PBXNativeTarget "MetroExplorer" */;
+			buildPhases = (
+				23B213638C1406A27F2CD9CC /* [CP] Check Pods Manifest.lock */,
+				832C32F7219F2C2A00F9D876 /* Sources */,
+				832C32F8219F2C2A00F9D876 /* Frameworks */,
+				832C32F9219F2C2A00F9D876 /* Resources */,
+				5B405F74F9B393B0BB74573C /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MetroExplorer;
+			productName = MetroExplorer;
+			productReference = 832C32FB219F2C2A00F9D876 /* MetroExplorer.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		832C32F3219F2C2A00F9D876 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1010;
+				LastUpgradeCheck = 1010;
+				ORGANIZATIONNAME = "Chris Sun";
+				TargetAttributes = {
+					832C32FA219F2C2A00F9D876 = {
+						CreatedOnToolsVersion = 10.1;
+					};
+				};
+			};
+			buildConfigurationList = 832C32F6219F2C2A00F9D876 /* Build configuration list for PBXProject "MetroExplorer" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 832C32F2219F2C2A00F9D876;
+			productRefGroup = 832C32FC219F2C2A00F9D876 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				832C32FA219F2C2A00F9D876 /* MetroExplorer */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		832C32F9219F2C2A00F9D876 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				832C3309219F2C2B00F9D876 /* LaunchScreen.storyboard in Resources */,
+				832C3306219F2C2B00F9D876 /* Assets.xcassets in Resources */,
+				832C3304219F2C2A00F9D876 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		23B213638C1406A27F2CD9CC /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MetroExplorer-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5B405F74F9B393B0BB74573C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-MetroExplorer/Pods-MetroExplorer-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/MBProgressHUD/MBProgressHUD.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MBProgressHUD.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MetroExplorer/Pods-MetroExplorer-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		832C32F7219F2C2A00F9D876 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				839C313D21A86C40005A0332 /* YelpFusionResponse.swift in Sources */,
+				832C3315219F2E7500F9D876 /* MetroStationsTableViewController.swift in Sources */,
+				832C3311219F2C6600F9D876 /* MenuViewController.swift in Sources */,
+				832C3313219F2E1B00F9D876 /* LandmarksTableViewController.swift in Sources */,
+				83BCD91621B1F43200C7E688 /* LocationDetector.swift in Sources */,
+				832C32FF219F2C2A00F9D876 /* AppDelegate.swift in Sources */,
+				83BCD91B21B1FF9900C7E688 /* MetroStationTableViewCell.swift in Sources */,
+				83BCD91F21B20F7400C7E688 /* LandmarkTableViewCell.swift in Sources */,
+				83D01A5021A7341200CCE4CB /* PeresistenceManager.swift in Sources */,
+				83BCD92121B214D300C7E688 /* Extension.swift in Sources */,
+				839C313F21A86D9F005A0332 /* YelpFusionAPIManager.swift in Sources */,
+				83BCD92321B2185400C7E688 /* LandmarkDetailViewController.swift in Sources */,
+				83D01A4E21A72A9F00CCE4CB /* WmataResponse.swift in Sources */,
+				83D01A4C21A7275D00CCE4CB /* WmataAPIManager.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		832C3302219F2C2A00F9D876 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				832C3303219F2C2A00F9D876 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		832C3307219F2C2B00F9D876 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				832C3308219F2C2B00F9D876 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		832C330B219F2C2B00F9D876 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		832C330C219F2C2B00F9D876 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		832C330E219F2C2B00F9D876 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = AAA9FFA127ED52D6B5F41D43 /* Pods-MetroExplorer.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 36CF4QM7H3;
+				INFOPLIST_FILE = MetroExplorer/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.ChrisSun.MetroExplorer;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		832C330F219F2C2B00F9D876 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1324D01F5B5E3FC4DDB14A5C /* Pods-MetroExplorer.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 36CF4QM7H3;
+				INFOPLIST_FILE = MetroExplorer/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.ChrisSun.MetroExplorer;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		832C32F6219F2C2A00F9D876 /* Build configuration list for PBXProject "MetroExplorer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				832C330B219F2C2B00F9D876 /* Debug */,
+				832C330C219F2C2B00F9D876 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		832C330D219F2C2B00F9D876 /* Build configuration list for PBXNativeTarget "MetroExplorer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				832C330E219F2C2B00F9D876 /* Debug */,
+				832C330F219F2C2B00F9D876 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 832C32F3219F2C2A00F9D876 /* Project object */;
+}
